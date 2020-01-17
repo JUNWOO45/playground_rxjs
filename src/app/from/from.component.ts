@@ -3,11 +3,12 @@ import { ProductsService } from '../products.service';
 import { from } from 'rxjs';
 
 @Component({
-  selector: 'app-test',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.less']
+  selector: 'app-from',
+  templateUrl: './from.component.html',
+  styleUrls: ['./from.component.less']
 })
-export class TestComponent implements OnInit {
+export class FromComponent implements OnInit {
+
   products;
 
   constructor(
