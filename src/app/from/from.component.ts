@@ -17,7 +17,6 @@ export class FromComponent implements OnInit {
 
   ngOnInit() {
     this.products = this.productsService.getProducts();
-    // console.log(this.products);
     from(this.products).subscribe(console.log);
   }
 
