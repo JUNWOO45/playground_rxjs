@@ -17,13 +17,12 @@ export class FilterComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.clear()
     this.products = this.productsService.getProducts();
     from(this.products)
       .pipe(
         filter(item => {
-          if(item?.customFunc()) {
-            console.log('hi')
-          }
+          return item.price < 1000
         })
       )
       .subscribe(console.log)
