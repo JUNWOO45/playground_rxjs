@@ -7,6 +7,7 @@ import { SkipComponent } from './skip/skip.component';
 import { SkipwhileComponent } from './skipwhile/skipwhile.component';
 import { TakeComponent } from './take/take.component';
 import { DistinctComponent } from './distinct/distinct.component';
+import { ReduceComponent } from './reduce/reduce.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'skipWhile', component: SkipwhileComponent },
   { path: 'take', component: TakeComponent },
   { path: 'distinct', component: DistinctComponent },
+  { path: 'reduce', component: ReduceComponent },
 ];
 
 @NgModule({
