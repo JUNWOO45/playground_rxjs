@@ -7,6 +7,8 @@ import { FromComponent } from './from/from.component';
 import { FilterComponent } from './filter/filter.component';
 import { SkipComponent } from './skip/skip.component';
 import { SkipwhileComponent } from './skipwhile/skipwhile.component';
+import { TakeComponent } from './take/take.component';
+import { DistinctComponent } from './distinct/distinct.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { SkipwhileComponent } from './skipwhile/skipwhile.component';
     FromComponent,
     FilterComponent,
     SkipComponent,
-    SkipwhileComponent
+    SkipwhileComponent,
+    TakeComponent,
+    DistinctComponent
   ],
   imports: [
     BrowserModule,
