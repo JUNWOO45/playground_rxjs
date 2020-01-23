@@ -11,6 +11,7 @@ import { ReduceComponent } from './reduce/reduce.component';
 import { SingleComponent } from './single/single.component';
 import { MapComponent } from './map/map.component';
 import { PluckComponent } from './pluck/pluck.component';
+import { FlatMapComponent } from './flat-map/flat-map.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'single', component: SingleComponent },
   { path: 'map', component: MapComponent },
   { path: 'pluck', component: PluckComponent },
+  { path: 'flatMap', component: FlatMapComponent },
 ];
 
 @NgModule({

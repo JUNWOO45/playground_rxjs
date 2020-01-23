@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { from, fromEvent } from 'rxjs';
-import { pluck, map, tap } from 'rxjs/operators';
+import { ajax } from 'rxjs/ajax';
+import { pluck, map, tap, flatMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-pluck',
@@ -31,6 +32,15 @@ export class PluckComponent implements OnInit {
           map(v => `innerText는 ${v} 입니다`)
         )
         .subscribe(console.log)
+
+    fromEvent(document.getElementById('ajax'), 'click')
+    .pipe(
+      pluck("target", "innerText"),
+      flatMap(v => {
+        return ajax.getJSON('/src/app/products.json')
+      })
+    )
+    .subscribe(console.log)
   }
 
 }

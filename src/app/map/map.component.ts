@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { from } from 'rxjs';
-import { map, take } from 'rxjs/operators';
+import { map, take, flatMap, mergeMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-map',
@@ -21,6 +21,10 @@ export class MapComponent implements OnInit {
       .pipe(
         take(2),
         map(v => `${v.name}의 가격은 ${v.price}입니다.`)
+        // map(v => ["!", v.reviews])
+        // flatMap(v => ["!", v.reviews])
+        // mergeMap(v => ["!", v.reviews])
+        
       )
       .subscribe(console.log)
   }

@@ -13,6 +13,7 @@ import { ReduceComponent } from './reduce/reduce.component';
 import { SingleComponent } from './single/single.component';
 import { MapComponent } from './map/map.component';
 import { PluckComponent } from './pluck/pluck.component';
+import { FlatMapComponent } from './flat-map/flat-map.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PluckComponent } from './pluck/pluck.component';
     ReduceComponent,
     SingleComponent,
     MapComponent,
-    PluckComponent
+    PluckComponent,
+    FlatMapComponent
   ],
   imports: [
     BrowserModule,
