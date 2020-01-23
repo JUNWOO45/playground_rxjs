@@ -12,6 +12,7 @@ import { DistinctComponent } from './distinct/distinct.component';
 import { ReduceComponent } from './reduce/reduce.component';
 import { SingleComponent } from './single/single.component';
 import { MapComponent } from './map/map.component';
+import { PluckComponent } from './pluck/pluck.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MapComponent } from './map/map.component';
     DistinctComponent,
     ReduceComponent,
     SingleComponent,
-    MapComponent
+    MapComponent,
+    PluckComponent
   ],
   imports: [
     BrowserModule,

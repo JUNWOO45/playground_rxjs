@@ -10,6 +10,7 @@ import { DistinctComponent } from './distinct/distinct.component';
 import { ReduceComponent } from './reduce/reduce.component';
 import { SingleComponent } from './single/single.component';
 import { MapComponent } from './map/map.component';
+import { PluckComponent } from './pluck/pluck.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'reduce', component: ReduceComponent },
   { path: 'single', component: SingleComponent },
   { path: 'map', component: MapComponent },
+  { path: 'pluck', component: PluckComponent },
 ];
 
 @NgModule({
