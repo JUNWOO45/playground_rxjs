@@ -10,6 +10,8 @@ import { SkipwhileComponent } from './skipwhile/skipwhile.component';
 import { TakeComponent } from './take/take.component';
 import { DistinctComponent } from './distinct/distinct.component';
 import { ReduceComponent } from './reduce/reduce.component';
+import { SingleComponent } from './single/single.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ReduceComponent } from './reduce/reduce.component';
     SkipwhileComponent,
     TakeComponent,
     DistinctComponent,
-    ReduceComponent
+    ReduceComponent,
+    SingleComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
