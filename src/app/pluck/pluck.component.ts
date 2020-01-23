@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
-import { from } from 'rxjs';
-import { pluck } from 'rxjs/operators';
+import { from, fromEvent } from 'rxjs';
+import { pluck, map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-pluck',
@@ -19,9 +19,18 @@ export class PluckComponent implements OnInit {
     this.products = this.s.getProducts();
     from(this.products)
       .pipe(
-        pluck('reviews')
+        pluck('reviews'),
+        map(v => `리뷰는 ${v}개가 존재합니다`)
       )
       .subscribe(console.log)
+
+    fromEvent(document.getElementById('btn'), 'click')
+        .pipe(
+          tap(console.log),
+          pluck("target", "innerText"),
+          map(v => `innerText는 ${v} 입니다`)
+        )
+        .subscribe(console.log)
   }
 
 }
